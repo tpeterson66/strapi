@@ -20,7 +20,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Strapi application
         run: npm run build
@@ -30,4 +30,3 @@ jobs:
         with:
           app-name: my-strapi-app-tpeterson # Replace with your Azure App Service name
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }} # Add your Azure App Service publish profile as a secret in the repository settings
-
