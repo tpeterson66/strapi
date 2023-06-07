@@ -24,6 +24,8 @@ jobs:
 
       - name: Build Strapi application
         run: yarn run build
+      - name: file directory
+        run: ls -la
 
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
